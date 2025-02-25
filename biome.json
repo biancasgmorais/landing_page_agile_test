@@ -40,18 +40,14 @@
   },
   "javascript": {
     "formatter": {
-<<<<<<< HEAD
-      "quoteStyle": "double",
       "arrowParentheses": "always",
       "bracketSameLine": false,
       "bracketSpacing": true,
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
       "semicolons": "always",
-      "trailingCommas": "all"
-=======
+      "trailingCommas": "all",
       "quoteStyle": "double"
->>>>>>> bb4cec7 (first commit)
     }
   }
 }

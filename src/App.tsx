@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback, useEffect, useState } from 'react';
+import { IEpisode, ITVShow } from './api/dataService.types';
+import DataService from './api/dataService';
+import { toast } from 'react-toastify';
+import { AppContainer, Header, SubTitle, Title } from './App.styles';
 
-function App() {
+
+const App = () => {
+
+  const [episodes, setEpisodes] = useState<IEpisode[]>([]);
+  const [tvShow, setTVShow] = useState<ITVShow>({cast: [], genres: [], ID: "", Images: {Background: ""}, Synopsis: "", Title: "", Year: 0});
+
+  const getData = useCallback(async () => {
+    try{
+      const tvShow = await DataService.getTVShow();
+      setTVShow(tvShow);
+      const episodes = await DataService.getEpisodes();
+      setEpisodes(episodes);
+    } catch (error) {
+      toast.error("Erro ao carregar informações");
+    }
+  }, [])
+
+  useEffect(() => {
+    getData();
+  }, [getData]);
+
+  console.log(tvShow);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer backgroundimage={tvShow.Images.Background}>
+      <Header>
+            <Title>{tvShow.Title}</Title>
+            <SubTitle>80% INDICADO / CIENCIA FICCIÓN / 2015 / EUA / 14</SubTitle>
+      </Header>
+
+
+    </AppContainer>
   );
 }
 

@@ -1,15 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface IAppContainerProps {
   backgroundimage: string;
 }
 
 export const AppContainer = styled.div<IAppContainerProps>`
-  background: url(${props => props.backgroundimage});
-  overflow: hidden;
+background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+              url(${(props) => props.backgroundimage});
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 `;
 
 export const Header = styled.div`

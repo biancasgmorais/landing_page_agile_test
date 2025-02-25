@@ -40,6 +40,7 @@
   },
   "javascript": {
     "formatter": {
+<<<<<<< HEAD
       "quoteStyle": "double",
       "arrowParentheses": "always",
       "bracketSameLine": false,
@@ -48,6 +49,9 @@
       "quoteProperties": "asNeeded",
       "semicolons": "always",
       "trailingCommas": "all"
+=======
+      "quoteStyle": "double"
+>>>>>>> bb4cec7 (first commit)
     }
   }
 }

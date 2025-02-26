@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/landing_page_agile_test/static/css/main.60a94e49.css",
+    "main.js": "/landing_page_agile_test/static/js/main.90fee1dd.js",
+    "static/js/453.9f736831.chunk.js": "/landing_page_agile_test/static/js/453.9f736831.chunk.js",
+    "index.html": "/landing_page_agile_test/index.html",
+    "main.60a94e49.css.map": "/landing_page_agile_test/static/css/main.60a94e49.css.map",
+    "main.90fee1dd.js.map": "/landing_page_agile_test/static/js/main.90fee1dd.js.map",
+    "453.9f736831.chunk.js.map": "/landing_page_agile_test/static/js/453.9f736831.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60a94e49.css",
+    "static/js/main.90fee1dd.js"
+  ]
+}

@@ -14,6 +14,10 @@ background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
   overflow: hidden;
 `;
 
+export const AppContent = styled.div`
+  max-height: 75%;
+`;
+
 export const Header = styled.div`
   display: flex;
   flex-direction: column;

@@ -1,6 +1,5 @@
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
 import type { IAccordionProps } from "./Accordion.types";
 import {
   AccordionContainer,

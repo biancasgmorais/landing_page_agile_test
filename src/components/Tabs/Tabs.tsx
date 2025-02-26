@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import { useState } from "react";
 import EpisodesAccordion from "../Accordion/Accordion";
 import TabPanel from "./TabPanel";
-import { BoxContainer, BoxContent } from "./styles";
+import { BoxContainer, BoxContainerTabs, BoxContent, TabsContainer } from "./styles";
 import type { ITabProps } from "./types";
 
 const SeasonTabs = ({ episodes }: ITabProps) => {
@@ -21,13 +21,13 @@ const SeasonTabs = ({ episodes }: ITabProps) => {
   return (
     <BoxContainer>
       <BoxContent>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs value={season} onChange={handleChange} aria-label="espisodes tabs">
+        <BoxContainerTabs>
+          <TabsContainer value={season} onChange={handleChange} aria-label="espisodes tabs">
             <Tab label="T1" />
             <Tab label="T2" />
             <Tab label="T3" />
-          </Tabs>
-        </Box>
+          </TabsContainer>
+        </BoxContainerTabs>
         <TabPanel value={season} index={0}>
           <EpisodesAccordion episodes={getEpisodesForSeason(1)} />
         </TabPanel>

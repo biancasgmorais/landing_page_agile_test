@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import { BoxTabPanel } from "./styles";
 import type { ITabPanelProps } from "./types";
 
 const TabPanel = (props: ITabPanelProps) => {
@@ -12,7 +13,7 @@ const TabPanel = (props: ITabPanelProps) => {
       aria-labelledby={`season-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <BoxTabPanel>{children}</BoxTabPanel>}
     </div>
   );
 };

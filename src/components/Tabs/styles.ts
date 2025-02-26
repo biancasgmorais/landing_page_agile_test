@@ -35,7 +35,11 @@ export const BoxContent = styled(Box)`
 `;
 
 export const BoxContainerTabs = styled(Box)`
-  margin-left: 30px;
-  max-width: 80%;
+  margin-left: 20px;
+  max-width: 90%;
   border-bottom: 1px solid #28292D;
+`;
+
+export const BoxTabPanel = styled(Box)`
+  padding: 0px 24px 0px 10px
 `;

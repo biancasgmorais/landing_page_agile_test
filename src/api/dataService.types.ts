@@ -14,8 +14,8 @@ export interface IEpisode {
 }
 
 export interface ITVShow {
-  cast: ICast[];
-  genres: IGenres[];
+  Cast: ICast[];
+  Genres: IGenres[];
   ID: string;
   Images: IImage;
   Synopsis: string;

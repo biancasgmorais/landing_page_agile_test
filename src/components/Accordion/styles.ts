@@ -1,10 +1,22 @@
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import { Accordion } from "@mui/material";
-import Typography from "@mui/material/Typography";
 
 import styled from "styled-components";
 
-export const AccordionContainer = styled(Accordion)`
+export const AccordionContainer = styled.div`
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 10px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+`;
+
+export const AccordionContent = styled(Accordion)`
   background-color: transparent !important;
 `;
 
@@ -18,6 +30,7 @@ export const AccordionTitleContainer = styled.div`
 export const AccordionImage = styled.img`
   width: 100%;
   height: auto;
+  margin-left: 10px;
 `;
 
 export const PlayIcon = styled(PlayCircleOutlineIcon)`
